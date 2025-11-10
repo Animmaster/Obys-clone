@@ -1,4 +1,5 @@
-![2025-11-1014 06 34-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/af828d1e-1b37-46eb-9b64-715797f90a17)
+
+![2025-11-1014 06 34-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/567a36fa-192b-4278-8c06-e6ee0bf87299)
 
 Obys
 
