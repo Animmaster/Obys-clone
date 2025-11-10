@@ -1,0 +1,563 @@
+<div id="smooth-wrapper">
+	<div id="smooth-content">
+		<!doctype html>
+		<html lang="en">
+			<head>
+				<style data-fls-preloader="false">
+					body>*:not(.fls-preloader):not(.preloader) {
+      opacity: 0;
+      visibility: hidden;
+   }
+
+   [data-fls-preloader-loaded] body>*:not(.fls-preloader):not(.preloader) {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .5s ease 0s;
+   }
+				</style>
+				<div class="preloader fls-preloader" aria-hidden="true">
+					<div class="preloader__container container--fluid">
+						<div class="preloader__top">
+							<span class="preloader__count">
+								<span class="js-count">0</span>
+								- 100
+							</span>
+							<span class="preloader__your">YOUR</span>
+						</div>
+						<div class="preloader__message">
+							<div class="preloader__text">
+								<span class="preloader__line">WEB EXPERIENCE</span>
+								<span class="preloader__line">
+									IS LOADING RIGHT
+									<span class="preloader__now js-now">
+										<span class="preloader__now-regular">NOW</span>
+										<span class="preloader__now-italic" aria-hidden="true">NOW</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="preloader__wait">Please wait a few seconds</div>
+					</div>
+				</div>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link rel="preload" href="./assets/fonts/silkSerifReg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+				<link rel="preload" href="./assets/fonts/silkSerif.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+				<link rel="preload" href="./assets/fonts/plainLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+				<link rel="preload" href="./assets/fonts/PlainReg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+				<link rel="shortcut icon" href="assets/img/favicon.ico">
+				<title>Obys  Agency</title>
+				<style>
+					/* 1) Прелоадер завжди поверх і відразу full-screen */
+		.preloader {
+			position: fixed;
+			inset: 0;
+			z-index: 2147483647;
+			background: #000;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.preloader__container {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.preloader__wait {
+			opacity: 0;
+		}
+
+		/* зʼявиться потім через JS */
+
+		/* 2) Ховаємо увесь сайт, крім прелоадера (і/або fls, якщо він у тебе лишається) */
+		body>*:not(.preloader):not(.fls-preloader) {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		/* 3) Не даємо прокрутку під прелоадером */
+		html.preload-lock,
+		html.preload-lock body {
+			overflow: hidden;
+		}
+
+		/* 4) Коли МИ (не інший скрипт) дамо атрибут — сайт проявиться */
+		[data-app-ready] body>*:not(.preloader):not(.fls-preloader) {
+			opacity: 1;
+			visibility: visible;
+			transition: opacity .5s ease;
+		}
+				</style>
+				<script type="module" crossorigin="" src="./js/index.min.js?v=1762779689388"></script>
+				<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1762779689388">
+			</head>
+			<body>
+				<div class="wrapper">
+					<header class="header" data-fls-header="" data-fls-header-scroll="" data-fls-header-scroll-show="" data-fls-cursor="">
+						<div class="header__container container--fluid">
+							<div class="header__menu menu">
+								<div class="menu__left">
+									<button type="button" class="menu__icon icon-menu" aria-label="Menu" data-fls-menu="" data-fls-magnet="">
+										<svg width="12" height="12" viewbox="0 0 12 12" fill="none">
+											<rect y="10" width="2" height="2" fill="currentColor"></rect>
+											<rect y="5" width="2" height="2" fill="currentColor" class="action-dote"></rect>
+											<rect width="2" height="2" fill="currentColor"></rect>
+											<rect x="5" y="10" width="2" height="2" fill="currentColor" class="action-dote"></rect>
+											<rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>
+											<rect x="5" width="2" height="2" fill="currentColor" class="action-dote"></rect>
+											<rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>
+											<rect x="10" y="5" width="2" height="2" fill="currentColor" class="action-dote"></rect>
+											<rect x="10" width="2" height="2" fill="currentColor"></rect>
+										</svg>
+									</button>
+									<a class="menu__logo" href="#">
+										<svg width="71" height="27" viewbox="0 0 71 27">
+											<path d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z" fill="currentColor"></path>
+											<path d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z" fill="currentColor"></path>
+											<path d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z" fill="currentColor"></path>
+											<path d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z" fill="currentColor"></path>
+											<path d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z" fill="currentColor"></path>
+											<path d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z" fill="currentColor"></path>
+											<path d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z" fill="currentColor"></path>
+											<path d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z" fill="currentColor"></path>
+											<path d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z" fill="currentColor"></path>
+											<path d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z" fill="currentColor"></path>
+										</svg>
+									</a>
+								</div>
+								<nav class="menu__body">
+									<ul class="menu__list">
+										<li class="menu__item">
+											<a href="#" class="menu__link menu__link--active">Home</a>
+										</li>
+										<li class="menu__item">
+											<a href="#" class="menu__link" data-fls-typed="">Works</a>
+										</li>
+										<li class="menu__item">
+											<a href="#" class="menu__link" data-fls-typed="">About</a>
+										</li>
+										<li class="menu__item">
+											<a href="#" class="menu__link" data-fls-typed="">Contacts</a>
+										</li>
+									</ul>
+									<div class="menu__info info">
+										<div class="info__section info__section--socials">
+											<h3 class="info__title">Socials</h3>
+											<ul class="info__list">
+												<li class="info__item">
+													<a class="info__link hv-effect" href="#">Dribbble</a>
+												</li>
+												<li class="info__item">
+													<a class="info__link hv-effect" href="#">Behance</a>
+												</li>
+												<li class="info__item">
+													<a class="info__link hv-effect" href="#">Instagram</a>
+												</li>
+												<li class="info__item">
+													<a class="info__link hv-effect" href="#">Facebook</a>
+												</li>
+												<li class="info__item">
+													<a class="info__link hv-effect" href="#">Twitter</a>
+												</li>
+												<li class="info__item">
+													<a class="info__link hv-effect" href="#">YouTube</a>
+												</li>
+											</ul>
+										</div>
+										<!-- Address -->
+										<div class="info__section info__section--address">
+											<h3 class="info__title">Address</h3>
+											<p class="info__text">
+												Originally from Kharkiv,
+												<br>
+												working globally
+											</p>
+										</div>
+										<!-- Say Hi -->
+										<div class="info__section info__section--say-hi">
+											<h3 class="info__title">Say Hi!</h3>
+											<a class="info__email hv-effect" href="mailto:info@obys.agency">info@obys.agency</a>
+										</div>
+									</div>
+								</nav>
+								<div class="menu__right">
+									<div class="menu__brand">
+										<p>Obys - Creative Design Agency</p>
+									</div>
+									<ul class="menu__nav-list">
+										<li class="menu__nav-item" data-fls-magnet="max:50;scale:1.04;rotate:6;ease:0.9">
+											<a href="#" class="menu__nav-link">Works</a>
+										</li>
+										<li class="menu__nav-item" data-fls-magnet="max:50;scale:1.04;rotate:6;ease:0.9">
+											<a href="#" class="menu__nav-link">About</a>
+										</li>
+										<li class="menu__nav-item" data-fls-magnet="max:50;scale:1.04;rotate:6;ease:0.9">
+											<a href="#" class="menu__nav-link">Contacts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--
+<fetch url="@components/layout/menu/menu.js?v=1762779689388on">
+<each loop='item in response'>
+</each>
+</fetch>
+-->
+						</div>
+					</header>
+					<main class="page page--home" id="main" data-fls-cursor="" data-scroll-container="">
+						<section class="hero">
+							<div class="hero__container container--fluid">
+								<div class="hero__title-row title-row">
+									<div class="hero__counter counter counter--position">01</div>
+									<h1 class="hero__title title shop-up">
+										We design unique
+										<span class="hero__word hero__word--flag-target" data-word="web">Web</span>
+										/
+										<span class="hero__word hero__word--flag-target" data-word="graphics">Graphics</span>
+										experience
+									</h1>
+								</div>
+								<img class="sr-only" data-image="web" src="./assets/img/Flag.jpg" alt="">
+								<img class="sr-only" data-image="graphics" src="./assets/img/Flag.jpg" alt="">
+							</div>
+							<div class="scroll-indicator" data-scroll-indicator="" data-si-dir="down" data-si-speed="60" data-si-mode="edge" data-si-which="end" data-si-width="18" data-si-slow="0.8" aria-hidden="true">
+								<div class="scroll-indicator__row">
+									<span class="scroll-indicator__text" data-scroll-indicator-text="">Scroll</span>
+									<span class="scroll-indicator__text" data-scroll-indicator-text="">Scroll</span>
+								</div>
+							</div>
+						</section>
+						<section class="video">
+							<div class="video__container">
+								<h2 class="video__title hidden">Featured Video</h2>
+								<div class="video__wrapper" data-cursor-skip="">
+									<img class="video__poster" src="./assets/img/main-poster.jpg" alt="">
+									<video class="video__obj" loop>
+										<source src="./files/Obys-Showreel-2022.mp4" type="video/mp4">
+										Your browser does not support the video tag.
+									</video>
+									<button class="video__button" type="button" aria-label="play video"></button>
+								</div>
+							</div>
+						</section>
+						<section class="projects">
+							<div class="projects__container container--fluid">
+								<div class="projects__title-row title-row title-row--end">
+									<div class="projects__counter counter counter--position">02</div>
+									<div class="projects__wavy wavy-block">
+										<h2 class="wavy-block__title title js-wavy shop-up" data-wavy-sensitivity="0.9" data-wavy-strength="1.3" data-wavy-max="80" data-wavy-settle="0.045" data-wavy-freq="0.22">Our Projects</h2>
+										<div class="wavy-block__underline">
+											<div class="wavy-block__hit"></div>
+											<svg viewbox="0 0 1531.125 100">
+												<path class="wavy-block__path" d="M0 50 Q133.51171875 50, 1531.125 50"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+								<div class="projects__items column-item">
+									<!-- ряд 1 -->
+									<a class="column-item__body" href="#" data-span="3">
+										<h3 class="column-item__heading hv-effect shop-up">Olga prudka</h3>
+										<div class="column-item__images" style="--ratio: 20/25" data-intensity="0.5" data-displace="assets/img/effect-image.jpg">
+											<img src="./assets/img/Olga_Prudka_1.png" alt="">
+											<img src="./assets/img/Olga_Prudka_2.png" alt="">
+										</div>
+										<div class="column-item__info">
+											<div class="column-item__work-type">Logo design, Website design, Development</div>
+											<time class="column-item__date" datetime="2024">2024</time>
+										</div>
+									</a>
+									<a class="column-item__body" href="#" data-span="5">
+										<h3 class="column-item__heading hv-effect shop-up">AIM</h3>
+										<div class="column-item__images" style="--ratio: 36/40" data-intensity="0.5" data-displace="assets/img/effect-image.jpg">
+											<img src="./assets/img/art.jpg" alt="">
+											<img src="./assets/img/porsche-1.jpg" alt="">
+										</div>
+										<div class="column-item__info">
+											<div class="column-item__work-type">Logo design, Website design, Development</div>
+											<time class="column-item__date" datetime="2024">2024</time>
+										</div>
+									</a>
+									<div class="column-item__body column-item__body--btn column-item__body--end" data-span="4">
+										<button class="column-item__button" type="button" data-hover-text="We are thrilled to have you on board. We hope you enjoy the projects" data-rotate="0">
+											<svg viewbox="0 0 91 118" fill="none" aria-hidden="true">
+												<path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path>
+											</svg>
+											<span>We are thrilled to have you on board. We hope you enjoy the projects</span>
+										</button>
+									</div>
+									<!-- ряд 2 -->
+									<div class="column-item__body column-item__body--btn" data-span="3">
+										<button class="column-item__button" type="button" data-hover-text="It will make you WOW!" data-rotate="-45">
+											<svg viewbox="0 0 91 118" fill="none" aria-hidden="true">
+												<path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path>
+											</svg>
+											<span>It will make you WOW!</span>
+										</button>
+									</div>
+									<a class="column-item__body" href="#" data-span="5">
+										<h3 class="column-item__heading hv-effect shop-up">OCHI</h3>
+										<div class="column-item__images" style="--ratio: 36/40" data-intensity="0.5" data-displace="assets/img/effect-image.jpg">
+											<img src="./assets/img/OCHI-1.png" alt="">
+											<img src="./assets/img/OCHI_2.png" alt="">
+										</div>
+										<div class="column-item__info">
+											<div class="column-item__work-type">Website design, Development</div>
+											<time class="column-item__date" datetime="2022">2022</time>
+										</div>
+									</a>
+									<a class="column-item__body" href="#" data-span="4">
+										<h3 class="column-item__heading hv-effect shop-up">David Lexer</h3>
+										<div class="column-item__images" style="--ratio: 30/38" data-intensity="0.5" data-displace="assets/img/effect-image.jpg">
+											<img src="./assets/img/Laxer_1-2.png" alt="">
+											<img src="./assets/img/Laxer_2.png" alt="">
+										</div>
+										<div class="column-item__info">
+											<div class="column-item__work-type">Website design, Development</div>
+											<time class="column-item__date" datetime="2023">2023</time>
+										</div>
+									</a>
+									<!-- ряд 3 -->
+									<a class="column-item__body" href="#" data-span="3">
+										<h3 class="column-item__heading hv-effect shop-up">Eminente</h3>
+										<div class="column-item__images" style="--ratio: 20/25" data-intensity="0.5" data-displace="assets/img/effect-image.jpg">
+											<img src="./assets/img/Eminente_First.png" alt="">
+											<img src="./assets/img/Eminente_Second.png" alt="">
+										</div>
+										<div class="column-item__info">
+											<div class="column-item__work-type">Logo design, Website design, Development</div>
+											<time class="column-item__date" datetime="2023">2023</time>
+										</div>
+									</a>
+									<div class="column-item__body column-item__body--btn column-item__body--end" data-span="4">
+										<button class="column-item__button" type="button" data-hover-text="We like its color palette" data-rotate="-90">
+											<svg viewbox="0 0 91 118" fill="none" aria-hidden="true">
+												<path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path>
+											</svg>
+											<span>We like its color palette</span>
+										</button>
+									</div>
+									<a class="column-item__body" href="#" data-span="5">
+										<h3 class="column-item__heading hv-effect shop-up">Makhno</h3>
+										<div class="column-item__images" style="--ratio: 30/38" data-intensity="0.5" data-displace="assets/img/effect-image.jpg">
+											<img src="./assets/img/Makhno_First.png" alt="">
+											<img src="./assets/img/Makhno_Hover.png" alt="">
+										</div>
+										<div class="column-item__info">
+											<div class="column-item__work-type">Website design, Development</div>
+											<time class="column-item__date" datetime="2023">2023</time>
+										</div>
+									</a>
+								</div>
+								<a class="projects__see-all" href="#">
+									See all projects
+									<span>(18)</span>
+								</a>
+							</div>
+						</section>
+						<section class="about">
+							<div class="about__container container--fluid">
+								<div class="about__content">
+									<div class="about__offset about__offset--left">
+										<div class="about__counter counter counter--position">03</div>
+									</div>
+									<div class="about__offset about__offset--right">
+										<div class="about__wavy wavy-block">
+											<h2 class="wavy-block__title title js-wavy shop-up" data-wavy-sensitivity="0.9" data-wavy-strength="1.3" data-wavy-max="80" data-wavy-settle="0.045" data-wavy-freq="0.22">About OBYS</h2>
+											<div class="wavy-block__underline">
+												<div class="wavy-block__hit"></div>
+												<svg viewbox="0 0 1531.125 100">
+													<path class="wavy-block__path" d="M0 50 Q133.51171875 50, 1531.125 50"></path>
+												</svg>
+											</div>
+										</div>
+										<div class="about__text shop-up">
+											<p>
+												Our agency is about people who love creating, designing and developing wow projects. In the same time
+                     we
+                     are a boutique agency that is more than the collective. We learn and grow, win and celebrate together.
+											</p>
+										</div>
+										<div class="about__inner">
+											<div class="about__inner-row">
+												<img class="about__img ibg" src="./assets/img/group.jpg" alt="Team obys">
+												<div class="about__decr">
+													<p>
+														We are happy to present our new website and updated version of Obys agency. As before we are
+                           open for
+                           new projects
+                           worldwide!
+													</p>
+													<p>
+														Would you like to have award winning site or unique branding style, please say hi to our manager
+                           info@obys.agency.
+                           And we will help you with the pleasure.
+													</p>
+												</div>
+											</div>
+											<div class="about__reward-block reward-block">
+												<div class="reward-block__row">
+													<div class="reward-block__title">Awwwards x16</div>
+													<div class="reward-block__decr">SOTM, SOTD and Honrable Mentions
+                           Red Dot Award x1</div>
+												</div>
+												<div class="reward-block__row">
+													<div class="reward-block__title">Red Dot Award x1</div>
+													<div class="reward-block__decr">Best of the Best</div>
+												</div>
+												<div class="reward-block__row">
+													<div class="reward-block__title">FWA x11</div>
+													<div class="reward-block__decr">FWA of The Day</div>
+												</div>
+												<div class="reward-block__row">
+													<div class="reward-block__title">CSSDA x23</div>
+													<div class="reward-block__decr">WOTM, WOTD and UI, UX, Innovation</div>
+												</div>
+												<div class="reward-block__row">
+													<div class="reward-block__title">Behance x25</div>
+													<div class="reward-block__decr">Interaction, Graphic Design</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="partnership">
+							<div class="partnership__container container--fluid">
+								<div class="partnership__wavy wavy-block">
+									<h2 class="wavy-block__title js-wavy">We work with</h2>
+									<div class="wavy-block__underline">
+										<div class="wavy-block__hit"></div>
+										<svg viewbox="0 0 1531.125 100">
+											<path class="wavy-block__path" d="M0 50 Q133.51171875 50, 1531.125 50"></path>
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="partnership__marquee marquee-item">
+								<div class="marquee-item__body" data-fls-marquee="" data-fls-marquee-speed="300">
+									<div class="marquee-item__text">
+										<span class="normal">technology -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="italic">fashion -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="normal">sport -</span>
+									</div>
+								</div>
+								<div class="marquee-item__body" data-fls-marquee="" data-fls-marquee-direction="right" data-fls-marquee-speed="300">
+									<div class="marquee-item__text">
+										<span class="normal">beauty -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="italic">real estate -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="normal">architecture -</span>
+									</div>
+								</div>
+								<div class="marquee-item__body" data-fls-marquee="" data-fls-marquee-speed="300">
+									<div class="marquee-item__text">
+										<span class="normal">science -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="italic">traveling -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="normal">partners -</span>
+									</div>
+								</div>
+								<div class="marquee-item__body" data-fls-marquee="" data-fls-marquee-direction="right" data-fls-marquee-speed="300">
+									<div class="marquee-item__text">
+										<span class="normal">Automotive -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="italic">hotels -</span>
+									</div>
+									<div class="marquee-item__text">
+										<span class="normal">Music -</span>
+									</div>
+								</div>
+							</div>
+						</section>
+					</main>
+					<footer class="footer" data-fls-cursor="" data-fls-footer="">
+						<div class="footer__container container--fluid">
+							<div class="footer__offset footer__offset--left">
+								<div class="footer__counter counter counter--position">04</div>
+							</div>
+							<div class="footer__offset footer__offset--right">
+								<a class="footer__wavy wavy-block" href="#">
+									<h2 class="wavy-block__title title js-wavy shop-up" data-fls-typed="" data-wavy-sensitivity="0.9" data-wavy-strength="1.3" data-wavy-max="80" data-wavy-settle="0.045" data-wavy-freq="0.22">Let's create</h2>
+									<div class="wavy-block__underline">
+										<div class="wavy-block__hit"></div>
+										<svg viewbox="0 0 1531.125 100">
+											<path class="wavy-block__path" d="M0 50 Q133.51171875 50, 1531.125 50"></path>
+										</svg>
+									</div>
+								</a>
+								<div class="footer__info info info--grid">
+									<div class="info__section">
+										<h3 class="info__title">Socials</h3>
+										<ul class="info__list">
+											<li class="info__item">
+												<a class="info__link hv-effect" href="#">Dribbble</a>
+											</li>
+											<li class="info__item">
+												<a class="info__link hv-effect" href="#">Behance</a>
+											</li>
+											<li class="info__item">
+												<a class="info__link hv-effect" href="#">Instagram</a>
+											</li>
+											<li class="info__item">
+												<a class="info__link hv-effect" href="#">Facebook</a>
+											</li>
+											<li class="info__item">
+												<a class="info__link hv-effect" href="#">Twitter</a>
+											</li>
+											<li class="info__item">
+												<a class="info__link hv-effect" href="#">YouTube</a>
+											</li>
+										</ul>
+									</div>
+									<!-- Address -->
+									<div class="info__section">
+										<h3 class="info__title">Address</h3>
+										<p class="info__text">
+											Originally from Kharkiv,
+											<br>
+											working globally
+										</p>
+									</div>
+									<!-- Say Hi -->
+									<div class="info__section">
+										<h3 class="info__title">Say Hi!</h3>
+										<a class="info__email hv-effect hv-effect--underline" href="mailto:info@obys.agency">info@obys.agency</a>
+									</div>
+								</div>
+								<div class="footer__wavy wavy-block wavy-block--reverse wavy-block--no-line">
+									<div class="wavy-block__underline wavy-block__underline--reverse">
+										<div class="wavy-block__hit"></div>
+										<svg viewbox="0 0 1531.125 100">
+											<path class="wavy-block__path" d="M0 50 Q133.51171875 50, 1531.125 50"></path>
+										</svg>
+										<div class="wavy-block__copy js-wavy" data-wavy-sensitivity="0.9" data-wavy-strength="1.3" data-wavy-max="80" data-wavy-settle="0.045" data-wavy-freq="0.22">Obys clone by Animmaster</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</body>
+		</html>
+	</div>
+</div>
+<canvas id="flagCanvas" class="flag-canvas" aria-hidden="true"></canvas>
